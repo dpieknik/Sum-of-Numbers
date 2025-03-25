@@ -1,5 +1,3 @@
-# Sum-of-Numbers
-
 <h1>Sum of Numbers</h1>
 
 <h2>Description</h2>
