@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">	
+    <title>Sum of Numbers</title>
+</head>
+<body>
+    <main>
+        <h1>Sum of Numbers</h1>
+        <script>
+
+            'use strict';
+
+            //Create a Sum of Numbers application
+
+            let sum = 0;          //Sums the user's values
+            let check = false;    //Logic check boolean
+            let numList = [];     //Array keeps track of the user's number choices
+            let cycles = 0;       //Number of cycles
+            let number;           //User's input
+            let dec;              //Break variable
+
+            //I actually found this one a little difficult. The multiple do-while loops in the requirements actually made this more complicated than it needed to be.
+            //I get that those types of requirements aren't always up to you as the creator. For instance there might be a larger program plugin that requires you to use methods
+            //other than one you might normally use, so I do get the real-world tie-in. It was just a backwards challenge to make the code less concise and felt a little weird.
+
+            do {
+
+            //Prompts the user for their value & checks whether it is a valid input
+
+            do {
+                number = Number(prompt('Please enter a number from 1 to 100. This program will add them and provide the sum'));
+                if (!Number.isNaN(number) && number >= 1 && number <= 100) {
+                numList.push(number);
+                check = true;
+                }
+                else {
+                alert('Invalid Entry. Please enter a number from 1 to 100.');
+                }
+            } while (check === false);
+
+            //Asks whether they would like to continue & resets the check variable
+
+            dec = prompt('Would you like to enter another number? Enter y for yes or any other value for no').toLowerCase();
+            check = false;
+
+            } while (dec === 'y');
+
+            //Sums the user's values
+
+            for (let i = 0; i < numList.length; i++)
+            {
+                sum += numList[i];
+
+            }
+
+            //Output sum
+
+            alert(`The sum of the numbers 1 - ${numList.length} is ${sum}`);
+
+
+
+
+        </script>
+    </main>
+</body>
+</html>
