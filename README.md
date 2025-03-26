@@ -13,6 +13,7 @@ My preferred build (I had to change it to meet requirements) used functions to b
 
 - <b>Visual Studio Code</b> 
 - <b>JavaScript</b>
+- <b>HTML</b>
 
 <h2>Environments Used </h2>
 
